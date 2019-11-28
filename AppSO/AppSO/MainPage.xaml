@@ -4,11 +4,52 @@
              xmlns:local="clr-namespace:AppSO"
              x:Class="AppSO.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <!--<StackLayout VerticalOptions="CenterAndExpand" Padding="5">
+        <StackLayout Orientation="Horizontal">
+            <Entry Placeholder="Nombre"></Entry>
+            <Entry Placeholder="Primer apellido"></Entry>
+            <Entry Placeholder="Segundo apellido"></Entry>
+        </StackLayout>
+        <Entry Placeholder="Correo electrónico"></Entry>
+        <Entry Placeholder="Teléfono"></Entry>
+        <Entry Placeholder="Contraseña" IsPassword="True"></Entry>
+        <Entry Placeholder="Repetir contraseña" IsPassword="True"></Entry>
+        <Label Text="Fecha de nacimiento"></Label>
+        <DatePicker></DatePicker>
+        <Label Text="Address"></Label>
+        <Editor></Editor>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Save Password"></Label>
+            <Switch IsToggled="False"></Switch>
+        </StackLayout>
+        <Button Text="Sign Up"></Button>
+        <Label Text="Already have account? Sign In" TextColor="Blue"></Label>
+    </StackLayout>-->
+
+    <StackLayout Margin="10,35,10,10">
+        <Label  Text="Registro de usuario UNED" FontSize="Large" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+        <Entry x:Name="Firstname"  Placeholder="Nombre"></Entry>
+        <Entry x:Name="Lastname" Placeholder="Primer apellido"></Entry>
+        <Entry x:Name="SecondLastname" Placeholder="Segundo apellido"></Entry>
+        <Entry x:Name="Email" Placeholder="Correo electrónico"></Entry>
+        <Entry x:Name="Phone" Placeholder="Teléfono"></Entry>
+        <Entry x:Name="Password" Placeholder="Contraseña" IsPassword="True"></Entry>
+        <Entry x:Name="ConfirmPassword" Placeholder="Repetir contraseña" IsPassword="True"></Entry>
+        <Label Text="Fecha de nacimiento"></Label>
+        <DatePicker x:Name="Birthday"></DatePicker>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="Guardar" TextColor="White" BackgroundColor="Blue"
+                    Clicked="OnSaveButtonClicked" HorizontalOptions="FillAndExpand"/>
+           
+        </Grid>
     </StackLayout>
+
+
+
 
 </ContentPage>
